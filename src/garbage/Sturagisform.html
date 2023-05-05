@@ -1,0 +1,162 @@
+import React from 'react'
+import axios from 'axios';
+import '../App.css';
+import { useEffect, useState } from "react";
+import { Modal } from 'reactstrap'; 
+import { ModalHeader } from 'reactstrap';
+
+const Sturagisform = () => {
+    let [data, updatedata] = useState([]);
+    let [product, updateproduct] = useState({
+      sname: "",
+      semail: "",
+      smobile: "",
+      saddress: "",
+      scollege: "",
+      sdegree: "",
+      total_amount: "",
+      paid_amount: "",
+      due_amount: "",
+      scourse: "https://princestudentapi.onrender.com/Course//1/",
+    });
+    useEffect(() => {
+      show();
+    });
+    async function show() {
+      var res = await axios.get(
+        "https://princestudentapi.onrender.com/AddStudent//"
+      );
+      updatedata(res.data);
+      // console.log(res);
+    }
+    function change(e) {
+      updateproduct({ ...product, [e.target.name]: e.target.value });
+    }
+      // const [values, setValues] = useState([]);
+  // const [option, setOptions] = useState();
+  // useEffect(() => {
+  //   fetch("https://princestudentapi.onrender.com/Course//")
+  //     .then((data) => data.json())
+  //     .then((val) => setValues(val));
+  // }, []);
+  return (
+    <>
+        <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          async function addData() {
+            var res = await axios.post(
+              "https://princestudentapi.onrender.com/AddStudent//",
+              product
+            );
+            alert("Sucess");
+            if (res.status === 200) {
+              alert("Ragister Successful");
+            }
+          }
+          addData();
+        }}
+      >
+      
+        <div className="col-sm-2 " id="stuformR">
+          <h2>User Ragistration</h2>
+          <div>
+          <input
+            type="text"
+            name="sname"
+            value={product.sname}
+            onChange={change}
+            className="form-control"
+            placeholder='Name'
+          />
+          </div>
+          <div>          
+          <input
+            type="email"
+            name="semail"
+            value={product.semail}
+            onChange={change}
+            className="form-control"
+            placeholder='Email'
+          />
+          </div>
+          <input
+            type="number"
+            name="smobile"
+            value={product.smobile}
+            onChange={change}
+            className="form-control"
+            placeholder='Mobile No.'
+          />
+          <div>
+          <input
+            type="text"
+            name="saddress"
+            value={product.saddress}
+            onChange={change}
+            className="form-control"
+            placeholder='Address'
+          />
+          </div>
+          <div>
+          <input
+            type="text"
+            name="scollege"
+            value={product.scollege}
+            onChange={change}
+            className="form-control"
+            placeholder='College'
+          />
+          </div>
+          <div>
+          <input
+            type="text"
+            name="sdegree"
+            value={product.sdegree}
+            onChange={change}
+            className="form-control"
+            placeholder='Degree'
+          />
+          </div>
+          <div>
+          <input
+            type="number"
+            name="total_amount"
+            value={product.total_amount}
+            onChange={change}
+            className="form-control"
+            placeholder='Total Amount'
+          />
+          </div>
+          <div>
+          <input
+            type="number"
+            name="paid_amount"
+            value={product.paid_amount}
+            placeholder='Paid Amount'
+            onChange={change}
+            className="form-control"
+          />
+          </div>
+          <div>
+          <input
+            type="number"
+            name="due_amount"
+            value={product.due_amount}
+            onChange={change}
+            className="form-control"
+            placeholder='Due Amount'
+          />
+          </div>
+          <br />
+          <button className="btn btn-danger" type="submit">
+            Click To Add
+          </button>
+        </div>
+        
+      </form>
+    </>
+  )
+}
+
+export default Sturagisform

@@ -1,0 +1,28 @@
+import React, { useState } from 'react'
+import { Modal } from 'reactstrap'; 
+import { ModalHeader } from 'reactstrap';
+
+const Temp = () => {
+    const [modal,updatemodal] = useState(false)
+  return (
+    <>
+        <div>
+           <Modal size='lg'
+            isOpen={modal}
+            toggle={()=>updatemodal(!modal )}>
+
+            <ModalHeader 
+            toggle={()=>updatemodal(!modal )}
+            > Popup </ModalHeader>
+           </Modal>
+            <p>Temp is running </p>
+            <button className='btn btn-primary mt-3' onClick={()=>updatemodal(true)}>
+                Open
+            </button>
+            
+        </div>
+    </>
+  )
+}
+
+export default Temp
