@@ -8,21 +8,56 @@ import Teachertabledata from './Teachertabledata';
 
 const Addteacher = () => {
     const [modal,updatemodal] = useState(false)
-    let [data, updatedata] = useState([]);
-    let [product, updateproduct] = useState({
-      teachername: "",
-      employeesid:'',
-      teacheremail: "",
-      teacherpassword: "",
-      teachermobile: "",
-      joindate: "2023-05-04",
-      education: "",
-      workexp: "",
-      photo: "https://princestudentapi.onrender.com/media/Teacher/dummy_pVAgr9Q.jpg",
-      gender: "M",
-      is_active: "true",
-      teachercourse: "https://princestudentapi.onrender.com/Course//10/"
-    });
+  const [filename, setFilename] = useState()
+  const [tname, setTname] = useState()
+  const [tid, setTid] = useState()
+  const [temail, setTemail] = useState()
+  const [tpwd, setTpwd] = useState()
+  const [tmob, setTmob] = useState()
+  const [tjdate, setTjdate] = useState()
+  const [tedu, setTedu] = useState()
+  const [texp, setTexp] = useState()
+  const [tgen, setTgen] = useState()
+  const [tacti, setTacti] = useState()
+  const [tcour, setTcour] = useState();
+    
+   
+  let api = 'https://princestudentapi.onrender.com/Teacher//'
+  const saveFile = () =>{
+    console.log('Button clicked')
+
+    let formData = new FormData();
+    formData.append("teachername", tname)
+    formData.append("employeesid", tid)
+    formData.append("teacheremail", temail)
+    formData.append("teacherpassword", tpwd)
+    formData.append("teachermobile", tmob)
+    formData.append("joindate", tjdate)
+    formData.append("education", tedu)
+    formData.append("workexp", texp)
+    formData.append("photo", filename)
+    formData.append("gender", tgen)
+    formData.append("is_active", tacti)
+    formData.append("teachercourse", tcour)
+    
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'multpart/form-data'
+        }
+    }
+
+    console.log(formData)
+    axios.post(api , formData, axiosConfig).then(
+        response =>{
+            console.log(response)
+            
+        }
+    ).catch(error =>{
+        console.log(error)
+    })
+
+}
     useEffect(() => {
       show();
     });
@@ -30,58 +65,35 @@ const Addteacher = () => {
       var res = await axios.get(
         "https://princestudentapi.onrender.com/Teacher//"
       );
-      updatedata(res.data);
+      // updatedata(res.data);
       // console.log(res);
     }
-    function change(e) {
-      updateproduct({ ...product, [e.target.name]: e.target.value });
-    }
+    // function change(e) {
+    //   updateproduct({ ...product, [e.target.name]: e.target.value });
+    // }
+    ;
     const [values, setValues] = useState([]);
-  const [option, setOptions] = useState();
-  useEffect(() => {
+     useEffect(() => {
     fetch("https://princestudentapi.onrender.com/Course//")
       .then((data) => data.json())
       .then((val) => setValues(val));
   }, []);
-  function ImageUpload(){
-    var [image,setImage]=useState('')
-    
-    function handleApi(){
-      const formData = new FormData()
-      formData.append('image',image)
-      axios.post('url',formData).then((res) => {
-        console.log(res)
-      })
-    }
-  }
+  
   return (
     <>
-    <Sidebar/>
-    <div className="allstuparentdiva">
+      <Sidebar />
+      <div className="allstuparentdiva">
         <div>
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
             <ModalHeader toggle={() => updatemodal(!modal)}></ModalHeader>
             <ModalBody>
               <center>
-                <h3>Add Teacher</h3>
+                <h3>Teacher Ragistration</h3>
               </center>
               <br />
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  async function addData() {
-                    var res = await axios.post(
-                      "https://princestudentapi.onrender.com/Teacher//",
-                      product
-                    );
-                    alert("Sucess");
-                    if (res.status === 200) {
-                      alert("Added Successfully");
-                    }
-                  }
-                  addData();
-                }}
-                encType='multipart/form-data'
+              
+                
               >
                 <Row>
                   <Col lg={6}>
@@ -90,8 +102,7 @@ const Addteacher = () => {
                       <input
                         type="text"
                         name="teachername"
-                        value={product.teachername}
-                        onChange={change}
+                        onChange={e => setTname(e.target.value)}
                         className="form-control"
                         placeholder="EnterName"
                       />
@@ -103,8 +114,7 @@ const Addteacher = () => {
                       <input
                         type="number"
                         name="employeesid"
-                        value={product.employeesid}
-                        onChange={change}
+                        onChange={e => setTid(e.target.value)}
                         className="form-control"
                         placeholder="Id Number "
                       />
@@ -119,8 +129,7 @@ const Addteacher = () => {
                       <input
                         type="email"
                         name="teacheremail"
-                        value={product.teacheremail}
-                        onChange={change}
+                        onChange={e => setTemail(e.target.value)}
                         className="form-control"
                         placeholder="Email Id"
                       />
@@ -132,8 +141,7 @@ const Addteacher = () => {
                       <input
                         type="password"
                         name="teacherpassword"
-                        value={product.teacherpassword}
-                        onChange={change}
+                        onChange={e => setTpwd(e.target.value)}
                         className="form-control"
                         placeholder="Enter Password"
                       />
@@ -148,8 +156,7 @@ const Addteacher = () => {
                       <input
                         type="number"
                         name="teachermobile"
-                        value={product.teachermobile}
-                        onChange={change}
+                        onChange={e => setTmob(e.target.value)}
                         className="form-control"
                         placeholder="Enter Mobile Number"
                       />
@@ -161,7 +168,7 @@ const Addteacher = () => {
                       <input
                         type="date"
                         name="joindate"
-                        onChange={change}
+                        onChange={e => setTjdate(e.target.value)}
                         className="form-control"
                         placeholder="Join Date"
                       />
@@ -176,8 +183,7 @@ const Addteacher = () => {
                       <input
                         type="text"
                         name="education"
-                        value={product.education}
-                        onChange={change}
+                        onChange={e => setTedu(e.target.value)}
                         className="form-control"
                         placeholder="Education"
                       />
@@ -189,9 +195,8 @@ const Addteacher = () => {
                       <input
                         type="text"
                         name="workexp"
-                        value={product.workexp}
                         placeholder="Work Experiance"
-                        onChange={change}
+                        onChange={e => setTexp(e.target.value)}
                         className="form-control"
                       />
                     </div>
@@ -201,63 +206,76 @@ const Addteacher = () => {
                 <Row>
                   <Col md={6}>
                     <div>
-                    <label htmlFor="Select_Gender">Select Gender</label>
-                    <select class="form-control" name="gender" >
-                <option value="O">Other</option>
-                <option value="F">Female</option>
-                <option value="M">Male</option>
-               </select>
+                      <label htmlFor="Select_Gender">Select Gender</label>
+                      <select class="form-control" name="gender" onChange={e => setTgen(e.target.value)} >
+                        <option value="O">Other</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                      </select>
                     </div>
                   </Col>
                   <Col md={6}>
                     <div>
                       <label htmlFor="Select_Course">Select Course</label>
-                      {/* <select onChange={change} name="scourse" className="form-control">
-                        {values.map((optn,i) => (
+                      <select
+                        onChange={e => setTcour(e.target.value)}
+                        name="scourse"
+                        className="form-control"
+
+                      >
+                        {values.map((optn, i) => (
                           <option key={i} value={optn.url}>
                             {optn.name}
                           </option>
                         ))}
-                      </select> */}
+                      </select>
                     </div>
                   </Col>
                 </Row>
-                <br/>
+                <br />
                 <Row>
-                <Col md={6}> 
-                {/* <div>
-                
-                <input type="checkbox" name="is_active" value="true" onChange={change} /><br/>
-                <label htmlFor="IsActive"><span> Is Active</span></label>
-                </div> */}
-               </Col>
-               <Col md={6}>
-               <input name="file" type="file"  onChange={function handleImage(e){
-      setImage(e.target.files[0])
-    }}/>
-               </Col>
-               </Row>
-               <br/>
+                  <Col md={6}>
+                    <div>
+                      <input
+                        type="checkbox"
+                        name="is_active"
+                        value="true"
+                        onChange={e => setTacti(e.target.value)}
+                      />
+                      <br />
+                      <label htmlFor="IsActive">
+                        <span> Is Active</span>
+                      </label>
+                    </div>
+                  </Col>
+                  <Col md={6}>
+                    <input
+                      type="file"
+                      onChange={e => setFilename(e.target.files[0])}
+                    />
+                  </Col>
+                </Row>
+                <br />
                 <center>
-                  <button className="btn btn-danger " type="submit">
-                    Submit 
+                  <button className="btn btn-danger " onClick={saveFile}>
+                    Submit
                   </button>
                 </center>
               </form>
             </ModalBody>
           </Modal>
         </div>
-        <button className="allstuchilddiva" onClick={() => updatemodal(true)}>
+        <button className="allstuchilddiva" onClick={() => updatemodal(true)} >
           <h4>Add Teacher </h4>
         </button>
       </div>
       <div className="allstuparentdivb">
         <div className="allstuchilddivb">
-        <Teachertabledata/>
+          <Teachertabledata />
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default Addteacher
