@@ -2,12 +2,12 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Modal, ModalBody, Row , Col } from 'reactstrap'; 
+import { Modal, ModalBody, Row, Col } from 'reactstrap';
 import { ModalHeader } from 'reactstrap';
 import Teachertabledata from './Teachertabledata';
 
 const Addteacher = () => {
-    const [modal,updatemodal] = useState(false)
+  const [modal, updatemodal] = useState(false)
   const [filename, setFilename] = useState()
   const [tname, setTname] = useState()
   const [tid, setTid] = useState()
@@ -20,12 +20,11 @@ const Addteacher = () => {
   const [tgen, setTgen] = useState()
   const [tacti, setTacti] = useState()
   const [tcour, setTcour] = useState();
-    
-   
-  let api = 'https://princestudentapi.onrender.com/Teacher//'
-  const saveFile = () =>{
-    console.log('Button clicked')
 
+
+  let api = 'https://princestudentapi.onrender.com/Teacher//'
+  const saveFile = () => {
+     
     let formData = new FormData();
     formData.append("teachername", tname)
     formData.append("employeesid", tid)
@@ -39,46 +38,49 @@ const Addteacher = () => {
     formData.append("gender", tgen)
     formData.append("is_active", tacti)
     formData.append("teachercourse", tcour)
-    
+
 
     let axiosConfig = {
-        headers: {
-            'Content-Type': 'multpart/form-data'
-        }
+      headers: {
+        'Content-Type': 'multpart/form-data'
+      }
     }
-
+    
     console.log(formData)
-    axios.post(api , formData, axiosConfig).then(
-        response =>{
-            console.log(response)
-            
-        }
-    ).catch(error =>{
-        console.log(error)
+    axios.post(api, formData, axiosConfig).then(
+      response => {
+        // console.log(response)
+        
+          alert("Added Successfully");
+          updatemodal(false);
+        
+      } 
+    ).catch(error => {
+      console.log(error)
     })
 
-}
-    useEffect(() => {
-      show();
-    });
-    async function show() {
-      var res = await axios.get(
-        "https://princestudentapi.onrender.com/Teacher//"
-      );
-      // updatedata(res.data);
-      // console.log(res);
-    }
-    // function change(e) {
-    //   updateproduct({ ...product, [e.target.name]: e.target.value });
-    // }
-    ;
-    const [values, setValues] = useState([]);
-     useEffect(() => {
+  }
+  useEffect(() => {
+    show();
+  });
+  async function show() {
+    var res = await axios.get(
+      "https://princestudentapi.onrender.com/Teacher//"
+    );
+    // updatedata(res.data);
+    // console.log(res);
+  }
+  // function change(e) {
+  //   updateproduct({ ...product, [e.target.name]: e.target.value });
+  // }
+  ;
+  const [values, setValues] = useState([]);
+  useEffect(() => {
     fetch("https://princestudentapi.onrender.com/Course//")
       .then((data) => data.json())
       .then((val) => setValues(val));
   }, []);
-  
+
   return (
     <>
       <Sidebar />
@@ -92,8 +94,6 @@ const Addteacher = () => {
               </center>
               <br />
               <form
-              
-                
               >
                 <Row>
                   <Col lg={6}>
@@ -257,7 +257,7 @@ const Addteacher = () => {
                 </Row>
                 <br />
                 <center>
-                  <button className="btn btn-danger " onClick={saveFile}>
+                  <button className="btn btn-danger " onClick={e=> saveFile(e.preventDefault())}>
                     Submit
                   </button>
                 </center>

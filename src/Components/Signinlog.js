@@ -34,19 +34,25 @@ const Signinlog = () => {
         }
     }} >
 
-      <div className="col-sm-12 offset-sm-1"  id='formcl'>
+      <div className="col-sm-3 " id='testtd' >
       <br/>
-         <h2>Log in </h2>
-        User Name <br/>
+      <center>
+      <i class="gg-user"></i>
+      
+         <h2>User Log in </h2></center>
+        <br/>
+        <label htmlFor='user_name'>User Name</label> <br/>
         <input type="email" name="email" value={user.email} onChange={change} className='form-control' /><br/>
-        Password<br/>
+        <label htmlFor='user_name'>Password</label> <br/>
         <input type="password" name="password" value={user.password} onChange={change} className='form-control' />
         <br/>
+        <center>
         <button className='btn btn-primary' type='submit' id='subbtn'>Log in</button>
-        <br/><br/>
+        </center>
+        <br/><br/><br/>
         {/* <p style={{fontSize:'22px'}}>New User CLick </p>  */}
         <Link to='/signin'>
-        <button className='btn btn-success' type='submit'>New User ? Click Here  To Ragister</button>
+        <button className='btn text-light' type='submit'>New User ? Click Here  To Ragister</button>
         </Link>
         </div>
       </form>

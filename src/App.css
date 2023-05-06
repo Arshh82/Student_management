@@ -24,24 +24,19 @@
 }
 .formm
 {
-  width: 1200px;
-  height: 650px;
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40vw;
+height: 80vh;
+padding: 15%;
+border-radius: 20px;
+-webkit-backdrop-filter: blur(6.2px);
+backdrop-filter: blur(6.2px);
+background: rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(255, 255, 255, 0.24);
 }
-#formcl
-{
-  position: relative;
-  margin-top: 100px;
-  margin-right: -90%;
-  margin-left: 30%;
 
-}
 .siginc
 {
   display: flex;
@@ -54,16 +49,57 @@
    position: fixed;
   margin-left: -374px;
 }
+
+
+.gg-user {
+    display: block;
+    transform: scale(var(--ggs,1));
+    box-sizing: border-box;
+    width: 12px;
+    height: 18px
+}
+.gg-user::after,
+.gg-user::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: 3px solid
+}
+.gg-user::before {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -9.5vh;
+    left: 2px
+}
+.gg-user::after {
+    width: 33px;
+    height: 30px;
+    border-bottom: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    top: -5vh
+}
 .formmsignin
 {
-  width: 1100px;
-  height: 650px;
-  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  align-items: center;
+  width: 30vw;
+  height: 80vh;
+  padding: 15%;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(6.2px);
+  backdrop-filter: blur(6.2px);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   
+}
+#testtd
+{
+  display: block;
+  width: 15vw;
 }
 .addd
 {
@@ -185,10 +221,7 @@ td {
   font-size: large;
   box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.parentdiva :hover {
-  width: 16vw;
-  height: 14vh;
-}
+
 .parentdivb
 {
   display: flex;

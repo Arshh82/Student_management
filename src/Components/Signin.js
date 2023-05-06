@@ -9,16 +9,16 @@ const Signin = () => {
     <div id='mainn'>
       
       <div className='formmsignin'>      
-      <img src={siginp} alt='no img' className='siginpp' />
-      
-      <Signinlog></Signinlog>
+      {/* <img  src={siginp} alt='no img' className='siginpp' /> */}
       
       
+      <Signinlog/>
       
       </div>
       
 
     </div>
+    
     </>
   )
 }
