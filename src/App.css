@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
 }
 .loginpp
 {
@@ -22,12 +23,15 @@
   position: relative;
   margin-left: -300px;
 }
+.addico{
+  font-size: large;
+}
 .formm
 {
 display: flex;
 justify-content: center;
 align-items: center;
-width: 40vw;
+width: 36vw;
 height: 80vh;
 padding: 15%;
 border-radius: 20px;
@@ -35,6 +39,11 @@ border-radius: 20px;
 backdrop-filter: blur(6.2px);
 background: rgba(255, 255, 255, 0.3);
 border: 1px solid rgba(255, 255, 255, 0.24);
+}
+#formcl
+{
+  width: 30vw;
+  height: 60vh;
 }
 
 .siginc
@@ -110,9 +119,6 @@ border: 1px solid rgba(255, 255, 255, 0.24);
 {
   margin-top: -8vh;
 }
-
-
-
 /* -------------------- */
 * {
   margin: 0;

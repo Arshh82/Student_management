@@ -15,9 +15,9 @@ let Login = () => {
       
       <div className='formm'>      
       {/* <img src={loginp} alt='no img' className='loginpp' /> */}
-      <div className=''>
-      <Loginlogic className='formlog' ></Loginlogic>
-      </div>
+      
+      <Loginlogic/>
+      
       
       
       </div>
