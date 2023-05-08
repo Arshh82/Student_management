@@ -32,7 +32,7 @@ const Sidebar = () => {
             </Link>
             <Link style={{ textDecoration: 'none'} } to="/addteacher">
               <li>
-                <h3 >Teacher</h3>
+                <h3 >Teacher </h3>
               </li>
             </Link>
             <li>
