@@ -21,10 +21,8 @@ const Addteacher = () => {
   const [tacti, setTacti] = useState()
   const [tcour, setTcour] = useState();
 
-
   let api = 'https://princestudentapi.onrender.com/Teacher//'
   const saveFile = () => {
-     
     let formData = new FormData();
     formData.append("teachername", tname)
     formData.append("employeesid", tid)

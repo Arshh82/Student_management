@@ -9,40 +9,37 @@ import { Link } from 'react-router-dom'
 const Sidebar = () => {
   return (
     <>
+    
       <div class="side-menu">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div className="dlst">
           <ul>
-            <hr style={{ color: "white" }}></hr>
-            <Link to="/dashboard">
+            <hr style={{ color: "black" }}></hr>
+            <br/>
+            <Link style={{ textDecoration: 'none' }} to="/dashboard">
               <li>
-                <span>Dashboard</span>
+                <h3>Dashboard</h3>
               </li>
             </Link>
-            <Link to="/allstudents">
+            <Link style={{ textDecoration: 'none' }} to="/allstudents">
               <li>
-                <span>All Students</span>
+                <h3 >All Students</h3>
               </li>
             </Link>
-            <Link to="/courseadd">
+            <Link style={{ textDecoration: 'none' }} to="/courseadd">
               <li>
-                <span>Courses</span>{" "}
+                <h3 >Courses</h3>
               </li>
             </Link>
-            <Link to="/addteacher">
+            <Link style={{ textDecoration: 'none'} } to="/addteacher">
               <li>
-                <span>Teacher</span>{" "}
+                <h3 >Teacher</h3>
               </li>
             </Link>
             <li>
-              <span>Settings</span>{" "}
+              <h3 >Settings</h3>
             </li>
-            <hr style={{ color: "white" }}></hr>
+            <br/>
+            <hr style={{ color: "black" }}></hr>
           </ul>
         </div>
       </div>

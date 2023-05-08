@@ -17,23 +17,18 @@ const Dashboardcontent = () => {
   {
     updatecourse({...course,[e.target.name]:e.target.value});
   }
-  
   return (
 
     <>
         <div className='parentdiva'>
          <div className='info' >
-           <span>Total Student- </span>
+         <div id='nav'></div> 
+           <h4>Total 9 Student </h4>
          </div>
          <div className='info'>
-           <p>Total course- </p>
+           <h4>Total {data.length} Courses</h4>
          </div>
-         <div className='info'>
-           <p>Front End Course </p>
-         </div>
-         <div className='info'>
-           <p>Back End Course </p>
-         </div>
+         
      </div>
      <div className='parentdivb'>
         <div className='coursepanela'>

@@ -2,19 +2,20 @@ import '../../App.css';
 import React, { useEffect, useState } from 'react'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Row, Col, Label } from 'reactstrap';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import { PersonAdd } from '@mui/icons-material'
 const Loginlogic = () => {
+  let navigate=useNavigate()
   let [data,updatedata]=useState([]);
-  let [product,updateproduct]=useState({name:'',email:'',address:'',password:''});
+  let [product,updateproduct]=useState({name:'',email:'',contact:'',password:''});
   useEffect(()=>{
     show();
   });  
   async function show()
   {
-    var res=await axios.get("http://tanveerpp.pythonanywhere.com/emps/");
+    var res=await axios.get("https://princestudentapi.onrender.com/Registration//");
     updatedata(res.data);
   }
   function change(e)
@@ -29,13 +30,12 @@ const Loginlogic = () => {
             e.preventDefault();
             async function addData() {
               var res = await axios.post(
-                "http://tanveerpp.pythonanywhere.com/emps/",
+                "https://princestudentapi.onrender.com/Registration//",
                 product
               );
               alert("Sucess");
-              if (res.status === 200) {
-                alert("product added sucessfully");
-              }
+              navigate('/');
+              
             }
             addData();
           }}
@@ -77,11 +77,11 @@ const Loginlogic = () => {
             <Row>
               <Col lg={6}>
                 <div>
-                  <Label htmlFor="Address">Address</Label>
+                  <Label htmlFor="Address">Contact</Label>
                   <input
                     type="text"
-                    name="address"
-                    value={product.address}
+                    name="contact"
+                    value={product.contact}
                     onChange={change}
                     className="form-control"
                   />
