@@ -10,6 +10,7 @@ import CourseAdd from './Components/CourseAdd';
 import Coursetabledata from './Components/Coursetabledata';
 import Addteacher from './Components/Addteacher';
 import Teachertabledata from './Components/Teachertabledata';
+import Testapii from './Components/testapii';
 import "/node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
     <Route path='/coursetabledata' element={<Coursetabledata/> }></Route>
     <Route path='/addteacher' element={<Addteacher/> }></Route>
     <Route path='/teachertable' element={<Teachertabledata/> }></Route>
+    <Route path='/testapii' element={<Testapii/> }></Route>
     </Routes>
 
   )
