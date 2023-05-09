@@ -44,9 +44,14 @@ const Allstudents = () => {
   }, []);
   return (
     <>
+    
       <Sidebar />
+      
+      <div className='pdaaaa'>
+      
       <div className="allstuparentdiva">
         <div>
+        
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
             <ModalHeader toggle={() => updatemodal(!modal)}></ModalHeader>
             <ModalBody>
@@ -63,9 +68,7 @@ const Allstudents = () => {
                       product
                     );
                     alert("Sucess");
-                    if (res.status === 200) {
-                      alert("Ragister Successful");
-                    }
+                    updatemodal(false)
                   }
                   addData();
                 }}
@@ -224,13 +227,14 @@ const Allstudents = () => {
           </Modal>
         </div>
         <button className="allstuchilddiva" onClick={() => updatemodal(true)}>
-          <h4>Add a Student</h4>
+          <center><h4>Add a Student</h4></center>
         </button>
       </div>
       <div className="allstuparentdivb">
         <div className="allstuchilddivb">
           <Allstudentdata />
         </div>
+      </div>
       </div>
     </>
   );

@@ -102,7 +102,7 @@ border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 20px;
   -webkit-backdrop-filter: blur(6.2px);
   backdrop-filter: blur(6.2px);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(247, 244, 244, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.24);
   
 }
@@ -152,6 +152,12 @@ li {
 
 table {
   padding: 10px;
+  
+
+}
+#tg{
+  height: 68vh;
+  overflow-y: scroll;
 }
 th,
 td {
@@ -162,8 +168,8 @@ td {
 .side-menu {
   display: flex;
   justify-content: start;
-  background: #ffffff;
-  width: 15vw;
+  background: #101553;
+  width: 100vw;
   height: 100vh;
   flex-direction: column;
   padding-top: 10vw;
@@ -174,7 +180,7 @@ td {
   display: flex;
   margin-top: 1.5vh;
   font-size: 24px;
-  color: rgb(78, 77, 80);
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   
@@ -183,56 +189,70 @@ td {
 .dlst{
   margin-bottom: 40vh;
   margin-right: 2.5vw;
+  width: 12vw;
+  height: 30vh;
+  position: fixed;
 }
 .side-menu li:hover {
-  background-color: rgb(85, 30, 212);
-  color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  color: #303030;
   border-radius: 12px ;
 
 }
 /* --------------------------------- */
 .parentdiva{
   padding: 2vh;
-  margin-top: -100vh;
-  margin-left: 15vw;
+  margin-top: 1vh;
+  margin-left: 0vw;
   display: flex;
   justify-content: space-between;
-  background-color: #de8aff;
-  width: 40vw;
-  height: 19vh;
+  background-color: #ff279300;
+  width: 33vw;
+  height: 15vh;
   
 }
 .info
  {
   display: flex;
   align-items: center;
-  width: 15vw;
-  height: 13vh;
-  background-color: #8324ff;
+  width: 12vw;
+  height: 10vh;
+  background-color: #101553;
+  margin-top: 10vh;
   color: aliceblue;
-  border-radius: 8px;
-  padding: 2.5vw;
+  border-radius: 10px;
+  padding-left: 1vw;
   font-size: large;
+}
+.pdaaa{
+  position: absolute;
+  width: 84vw;
+  height: 96vh;
+  background-color: #dcdcdc;
+  margin-left: 13.5vw;
+  margin-top: -97vh;
+  border-radius: 20px;
 }
 
 .parentdivb
 {
   display: flex;
   flex-direction: row;
-  background-color: #de8aff;;
-  width: 83.9vw;
-  height: 100vh;
+  /* background-color: #ec7777; */
+  width: 83.5vw;
+  height: 77vh;
   padding: 2vh;
-  margin-top: 0vh;
-  margin-left: 15vw;
+  margin-top: 2vh;
+  margin-left: vw;
 }
 
 .coursepanela
 {
-  width: 50vw;
-  height: 70vh;
+  width: 64vw;
+  height: 67vh;
   background-color: white;
   border-radius: 1vh 1vw;
+  margin-top: 7vh;
   margin-right: 1vw;
   padding-left: 2vw;
   padding-top: 2vh;
@@ -240,36 +260,56 @@ td {
 }
 .coursepanelb
 {
-  width: 30vw;
-  height: 70vh;
+  width: 25vw;
+  height: 67vh;
   background-color: white;
   border-radius: 1vh 1vw;
+  margin-top: 7vh;
   padding-left: 2vw;
   padding-top: 2vh;
   box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /* -------------------------------- */
+.pdaaaa{
+  position: absolute;
+  width: 84vw;
+  height: 96vh;
+  background-color: #dcdcdc;
+  margin-left: 13.5vw;
+  margin-top: -97vh;
+  border-radius: 20px;
+}
 .allstuparentdiva{
   padding: 2vh;
-  margin-top: -100vh;
-  margin-left: 15vw;
+  margin-top: 10vh;
+  margin-left: 0vw;
+  display: flex;
+  justify-content: start;
+  /* background-color: #3cff00; */
+  width: 30vw;
+  height: 14vh;
+}
+.divt
+{
+  padding: 2vh;
+  margin-top: 30vh;
+  margin-left: 2vw;
   display: flex;
   justify-content: start;
   background-color: #f05462;
-  width: 83vw;
-  height: 17vh;
+
 }
 .allstuchilddiva
 {
   
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 15vw;
-    height: 10vh;
-    background-color: #8324ff;
+    width: 12vw;
+    height: 7vh;
+    background-color: #32066b;
     color: aliceblue;
     border-radius: 1vh 1vw;
-    padding: 2.5vw;
     font-size: large;
     box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   
@@ -278,22 +318,22 @@ td {
   display: flex;
   flex-direction: row;
   /* background-color: aqua; */
-  width: 83vw;
-  height: 78vh;
-  padding: 2vh;
+  width: 83.5vw;
+  height: 70vh;
+  padding-left: 2vh;
   padding-top: 1vh;
-  margin-top: 1vh;
-  margin-left: 15vw;
+  margin-top: -3vh;
+  margin-left: 0vw;
 }
 .allstuchilddivb
 {
-  width: 81vw;
-  height: 70vh;
+  width: 83vw;
+  height: 71vh;
   background-color: white;
   border-radius: 1vh 1vw;
-  padding-left: 2vw;
-  padding-top: 2vh;
-  box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 1%;
+  padding-top: 0;
+  box-shadow: 0 01px 0px 0 rgb(9, 7, 100), 0 8px 10px 0 rgba(0, 0, 0, 0.8);
 }
 #stuformR{
   display: block;

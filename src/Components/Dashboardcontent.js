@@ -20,6 +20,7 @@ const Dashboardcontent = () => {
   return (
 
     <>
+        <div className='pdaaa'>
         <div className='parentdiva'>
          <div className='info' >
          <div id='nav'></div> 
@@ -57,6 +58,7 @@ const Dashboardcontent = () => {
         <div className='coursepanelb'>
         <p>Courses Overview</p>
         </div>
+     </div>
      </div>
     </>
   )

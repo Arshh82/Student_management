@@ -20,8 +20,8 @@ const Allstudentdata = () => {
 
   return (
     <>
-    <div>
-    <table className='table table-hover '>
+    <div id='tg'>
+    <table className='table table-hover ' >
         <thead className=" thead-danger">
           <tr>
             <th>Student Name </th>
@@ -35,7 +35,7 @@ const Allstudentdata = () => {
             <th>Due Amount</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {data.map((v)=>{
             return(<tr key={v.id}>
               <td>{v.sname}</td>

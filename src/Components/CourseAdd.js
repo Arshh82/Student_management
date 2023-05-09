@@ -33,6 +33,7 @@ const CourseAdd = () => {
   return (
     <>
       <Sidebar />
+      <div className="pdaaaa">
       <div className="allstuparentdiva">
         <div>
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
@@ -50,10 +51,9 @@ const CourseAdd = () => {
                       "https://princestudentapi.onrender.com/Course//",
                       product
                     );
-                    alert("Sucess");
-                    if (res.status === 200) {
-                      alert("Ragister Successful");
-                    }
+                    alert("Added Sucessfully");
+                    updatemodal(false)
+                   
                   }
                   addData();
                 }}
@@ -133,6 +133,7 @@ const CourseAdd = () => {
         <div className="allstuchilddivb">
           <Coursetabledata/>
         </div>
+      </div>
       </div>
     </>
   )

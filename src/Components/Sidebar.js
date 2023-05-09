@@ -13,7 +13,7 @@ const Sidebar = () => {
       <div class="side-menu">
         <div className="dlst">
           <ul>
-            <hr style={{ color: "black" }}></hr>
+            <hr style={{ color: "white" }}></hr>
             <br/>
             <Link style={{ textDecoration: 'none' }} to="/dashboard">
               <li>
@@ -39,7 +39,7 @@ const Sidebar = () => {
               <h3 >Settings</h3>
             </li>
             <br/>
-            <hr style={{ color: "black" }}></hr>
+            <hr style={{ color: "white" }}></hr>
           </ul>
         </div>
       </div>

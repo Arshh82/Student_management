@@ -82,6 +82,7 @@ const Addteacher = () => {
   return (
     <>
       <Sidebar />
+      <div className='pdaaa'>
       <div className="allstuparentdiva">
         <div>
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
@@ -152,7 +153,8 @@ const Addteacher = () => {
                     <div>
                       <label htmlFor="mobile_no.">Mobile No.</label>
                       <input
-                        type="number"
+                      maxLength={10}
+                        type="tel"
                         name="teachermobile"
                         onChange={e => setTmob(e.target.value)}
                         className="form-control"
@@ -271,6 +273,7 @@ const Addteacher = () => {
         <div className="allstuchilddivb">
           <Teachertabledata />
         </div>
+      </div>
       </div>
     </>
   );
