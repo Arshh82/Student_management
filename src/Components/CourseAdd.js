@@ -34,6 +34,7 @@ const CourseAdd = () => {
     <>
       <Sidebar />
       <div className="pdaaaa">
+      <div className='Dtext'><p className='fw-bold' style={{fontSize:"60px"}}>Course Panel</p></div>
       <div className="allstuparentdiva">
         <div>
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>

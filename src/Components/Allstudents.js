@@ -47,7 +47,9 @@ const Allstudents = () => {
     
       <Sidebar />
       
+      
       <div className='pdaaaa'>
+      <div className='Dtext'><p className='fw-bold' style={{fontSize:"60px"}}>Student Panel</p></div>
       
       <div className="allstuparentdiva">
         <div>
@@ -56,7 +58,7 @@ const Allstudents = () => {
             <ModalHeader toggle={() => updatemodal(!modal)}></ModalHeader>
             <ModalBody>
               <center>
-                <h3>User Ragistration</h3>
+                <h3>Student Ragistration</h3>
               </center>
               <br />
               <form
@@ -226,6 +228,7 @@ const Allstudents = () => {
             </ModalBody>
           </Modal>
         </div>
+        
         <button className="allstuchilddiva" onClick={() => updatemodal(true)}>
           <center><h4>Add a Student</h4></center>
         </button>

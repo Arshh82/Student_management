@@ -33,9 +33,10 @@ const Teachertabledata = () => {
   return (
     <>
     <div>
-    <table className='table table-hover '>
-        <thead className=" thead-danger">
-          <tr>
+    <table className='table'>
+        <thead >
+          <tr style={{backgroundColor
+        :'white'}}>
             <th>Teacher Name</th>
             <th>Employe Id</th>
             <th>E-Mail</th>
@@ -47,10 +48,12 @@ const Teachertabledata = () => {
             {/* <th>Photo</th> */}
             <th>Gender</th>
             <th>Is Active</th>
+            <th></th>
             {/* <th>Teacher Course</th> */}
           </tr>
         </thead>
-        <tbody>
+        <tbody  className='tablee' style={{color
+        :'white'}}>
           {data.map((v)=>{
             return(<tr key={v.id}>
               <td>{v.teachername}</td>

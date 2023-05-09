@@ -24,16 +24,19 @@ const Coursetabledata = () => {
   return (
     <>
     <div>
-    <table className='table table-hover '>
-        <thead className=" thead-danger">
-          <tr>
+    <table className='table'>
+        <thead>
+          <tr style={{backgroundColor
+        :'white'}}>
             <th>Course Name</th>
             <th>Fess</th>
             <th>Duration</th>
             <th>Comments</th>
+            <th></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody  className='tablee' style={{color
+        :'white'}}>
           {data.map((v)=>{
             return(<tr key={v.id}>
               <td>{v.name}</td>

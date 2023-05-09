@@ -21,9 +21,10 @@ const Allstudentdata = () => {
   return (
     <>
     <div id='tg'>
-    <table className='table table-hover ' >
+    <table>
         <thead className=" thead-danger">
-          <tr>
+          <tr style={{backgroundColor
+        :'white'}}>
             <th>Student Name </th>
             <th>Student Email</th>
             <th>Mobile No.</th>
@@ -33,9 +34,11 @@ const Allstudentdata = () => {
             <th>Total Amount</th>
             <th>Paid Amount</th>
             <th>Due Amount</th>
+            <th></th>
           </tr>
         </thead>
-        <tbody >
+        <tbody className='tablee' style={{color
+        :'white'}} >
           {data.map((v)=>{
             return(<tr key={v.id}>
               <td>{v.sname}</td>

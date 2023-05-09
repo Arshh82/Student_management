@@ -83,6 +83,7 @@ const Addteacher = () => {
     <>
       <Sidebar />
       <div className='pdaaa'>
+      <div className='Dtext'><p className='fw-bold' style={{fontSize:"60px"}}>Teacher Panel</p></div>
       <div className="allstuparentdiva">
         <div>
           <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
