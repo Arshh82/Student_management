@@ -150,7 +150,8 @@ li {
 .btn:hover {
   color: #a78fff;
   background: white;
-  padding: 3px 8px;
+  /* padding: 3px 8px; */
+  width: 20vw;
   border: 2px solid #f05462;
 }
 
@@ -178,17 +179,39 @@ td {
   width: 100vw;
   height: 100vh;
   flex-direction: column;
-  padding-top: 10vw;
+  padding-top: 15vw;
 
 }
-
+.iigg
+{
+  width: 6.5vw;
+  height: 13vh;
+  margin-top: -12vw;
+  margin-left: 2vw;
+}
+.bii
+{
+  position: absolute;
+  margin-top: 1.5vh;
+  margin-left: -2.5vw;
+}
+.bii:hover
+{
+  color: aliceblue;
+}
+.biii
+{
+  position: absolute;
+  margin-top: 12vh;
+  margin-left: 5vw;
+}
 .side-menu li {
   display: flex;
   margin-top: 1.5vh;
   font-size: 24px;
   color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
+  justify-content: left;
 
 }
 
@@ -198,6 +221,7 @@ td {
   width: 12vw;
   height: 30vh;
   position: fixed;
+  margin-left: 1vw;
 }
 
 .side-menu li:hover {

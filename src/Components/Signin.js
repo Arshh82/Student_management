@@ -2,7 +2,7 @@ import React from 'react'
 import '../App'
 import Signinlog from './Signinlog'
 
-let siginp = new URL ("/public/images/logbackground/stuu.jpg",import.meta.url)
+// let siginp = new URL ("/public/images/logbackground/stuu.jpg",import.meta.url)
 const Signin = () => {
   return (
     <>
