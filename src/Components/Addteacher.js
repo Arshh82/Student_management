@@ -37,7 +37,6 @@ const Addteacher = () => {
     formData.append("is_active", tacti)
     formData.append("teachercourse", tcour)
 
-
     let axiosConfig = {
       headers: {
         'Content-Type': 'multpart/form-data'
@@ -51,7 +50,6 @@ const Addteacher = () => {
         
           alert("Added Successfully");
           updatemodal(false);
-        
       } 
     ).catch(error => {
       console.log(error)
@@ -78,62 +76,61 @@ const Addteacher = () => {
       .then((data) => data.json())
       .then((val) => setValues(val));
   }, []);
-
   return (
     <>
       <Sidebar />
       <div className='pdaaa'>
-      <div className='Dtext'><p className='fw-bold' style={{fontSize:"60px"}}>Teacher Panel</p></div>
-      <div className="allstuparentdiva">
-        <div>
-          <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
-            <ModalHeader toggle={() => updatemodal(!modal)}></ModalHeader>
-            <ModalBody>
-              <center>
-                <h3>Teacher Ragistration</h3>
-              </center>
-              <br />
-              <form
-              >
-                <Row>
-                  <Col lg={6}>
-                    <div>
-                      <label htmlFor="name">Name</label>
-                      <input
-                        type="text"
-                        name="teachername"
-                        onChange={e => setTname(e.target.value)}
-                        className="form-control"
-                        placeholder="EnterName"
-                      />
-                    </div>
-                  </Col>
-                  <Col lg={6}>
-                    <div>
-                      <label htmlFor="id">Id No. </label>
-                      <input
-                        type="number"
-                        name="employeesid"
-                        onChange={e => setTid(e.target.value)}
-                        className="form-control"
-                        placeholder="Id Number "
-                      />
-                    </div>
-                  </Col>
-                </Row>
+        <div className='Dtext'><p className='fw-bold' style={{ fontSize: "60px" }}>Teacher Panel</p></div>
+        <div className="allstuparentdiva">
+          <div>
+            <Modal size="lg" isOpen={modal} toggle={() => updatemodal(!modal)}>
+              <ModalHeader toggle={() => updatemodal(!modal)}></ModalHeader>
+              <ModalBody>
+                <center>
+                  <h3>Teacher Ragistration</h3>
+                </center>
                 <br />
-                <Row>
-                  <Col lg={6}>
-                    <div>
-                      <label htmlFor="email">E-Mail</label>
-                      <input
-                        type="email"
-                        name="teacheremail"
-                        onChange={e => setTemail(e.target.value)}
-                        className="form-control"
-                        placeholder="Email Id"
-                      />
-                    </div>
+                <form
+                >
+                  <Row>
+                    <Col lg={6}>
+                      <div>
+                        <label htmlFor="name">Name</label>
+                        <input
+                          type="text"
+                          name="teachername"
+                          onChange={e => setTname(e.target.value)}
+                          className="form-control"
+                          placeholder="EnterName"
+                        />
+                      </div>
+                    </Col>
+                    <Col lg={6}>
+                      <div>
+                        <label htmlFor="id">Id No. </label>
+                        <input
+                          type="number"
+                          name="employeesid"
+                          onChange={e => setTid(e.target.value)}
+                          className="form-control"
+                          placeholder="Id Number "
+                        />
+                      </div>
+                    </Col>
+                  </Row>
+                  <br />
+                  <Row>
+                    <Col lg={6}>
+                      <div>
+                        <label htmlFor="email">E-Mail</label>
+                        <input
+                          type="email"
+                          name="teacheremail"
+                          onChange={e => setTemail(e.target.value)}
+                          className="form-control"
+                          placeholder="Email Id"
+                        />
+                      </div>
                   </Col>
                   <Col lg={6}>
                     <div>
