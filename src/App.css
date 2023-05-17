@@ -415,3 +415,21 @@ td {
   position: absolute;
   align-items: center;
 }
+.coverv
+{
+  font-size: 1rem;
+  margin-left: 1.8vw;
+}
+.coverd
+{
+  font-size: .8rem;
+  margin-left: 1.8vw;
+  margin-top: -2vh;
+  color: #cacccf;
+  font-weight: 400;
+}
+.overicona{
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -1vw;
+}

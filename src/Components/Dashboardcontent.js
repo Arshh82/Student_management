@@ -41,13 +41,11 @@ const Dashboardcontent = () => {
             </svg>
            <p className='Tcounth'>Total Courses <br/><center><span className='tCount'>{data.length}</span></center></p>
          </div>
-         
      </div>
      <div className='parentdivb'>
         <div className='coursepanela'>
         <h3>Our Courses</h3>
         {/* <p>Done this Month</p> */}
-      
        <table className='table '>
         <thead className="thead-dark">
           <tr style={{backgroundColor
@@ -70,7 +68,41 @@ const Dashboardcontent = () => {
       </table>
         </div>
         <div className='coursepanelb'>
-        <p>Courses Overview</p>
+        <h4>Courses Overview</h4>
+        <br/>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="green" class="overicona" viewBox="0 0 16 16">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+              </svg>
+              <p className='coverv'>Raesh Sing Rs5400, Paid</p>
+              <p className='coverd'>22 FEB 7:20 PM</p>
+              <br />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="overicona" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg>
+              <p className='coverv'>New order #1832412</p>
+              <p className='coverd'>21 FEB 11 PM</p>
+              <br />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="overicona" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+              <p className='coverv'>New order #1832412</p>
+              <p className='coverd'>21 FEB 11 PM</p>
+              <br />
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="overicona" viewBox="0 0 16 16">
+                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+              </svg>
+              <p className='coverv'>Unlock packages for development</p>
+              <p className='coverd'>18 FEB 4:54 PM</p>
+              <br />
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="overicona" viewBox="0 0 16 16">
+                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+              </svg>
+              <p className='coverv'>Unlock packages for development</p>
+              <p className='coverd'>18 FEB 4:54 PM</p>
+            </div>
         </div>
      </div>
      </div>
