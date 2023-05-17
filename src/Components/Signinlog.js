@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 //let Siginp = new URL ("/public/images/logbackground/stuu.jpg",import.meta.url)
 
@@ -40,7 +41,7 @@ const Signinlog = () => {
             signup();
           }}
         >
-          <div className="col-sm-3 " id="testtd">
+          <div className="col-sm-5 " id="testtd">
             <br />
             <center>
               <i class="gg-user"></i>
